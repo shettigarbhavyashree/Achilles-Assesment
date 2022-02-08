@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="offset-3 col-6">
+      <form [formGroup]="maxSquareForm"  (ngSubmit)="onCalculate(maxSquareForm)">
+        <div class="form-group">
+          <label for="number1">Number 1: </label>
+          <input id="number1" class="form-control" type="text" formControlName="number1">
+        </div>
+        <div class="form-group">
+          <label for="number2">Number 2: </label>
+          <input id="number2" class="form-control" type="text" formControlName="number2">
+        </div>
+        <div class="form-group">
+          <label for="number3">Number 3: </label>
+          <input id="number3" class="form-control" type="text" formControlName="number3">
+        </div>
+
+        <button id="calculate" class="btn btn-primary mt-3" type="submit" [disabled]="maxSquareForm.invalid">Calculate</button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-3 col-6">
+      <h1 id="message" style="color: green;">{{message}}</h1>
+    </div>
+  </div>
+</div>
+
+
